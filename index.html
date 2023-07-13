@@ -1,15 +1,135 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>GIT/GITHUB how to use</title>
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
+
 <body>
     <h2>Como utilizar o Git/GitHub</h2>
-    <b>comandos:</b><br>
-    <p>os comandos serão explicados aqui.<br>
-    <ol>teste de listagem
-        <ul>so teste</ul>
-    </ol></p>
+    <p><b>GIT: </b>sistema versionamento de arquivos, que permite ter controle de
+        tudo que já foi realizado ou alterado em um arquivo. Em que várias pesso
+        as podem modificar o mesmo arquivo de diferentes dispositivos.</p>
+    <p><b>GIT HUB: </b>é uma plataforma para hospedar arquivos que estão sendo
+        utilizados no GIT.
+    </p>
+    <ul>
+        <li>REPOSITORIOS: são os diretórios do GIT para armazenar projetos, os códigos
+            podem ser compartilhados para outras pessoas. Muito usado para trabalhos em
+            equipe. Extremamente importante no mercado de trabalho, principalmente
+            para área de computação (desenvolvimento), podem ser adicionadas novas
+            versões a partir de um post.</li>
+    </ul>
+
+    <p><b>Status: </b>mostra o que está acontecendo no projeto. Ele mostra uma serie de
+        informações como a branch atual, o último commit e branches remotos, estado do
+        repositório, etc.
+    </p>
+
+    <p><b>Add: </b>salva e adiciona arquivos ao fluxo de versionamento, para serem
+        incluídos no próximo commit.
+        <li>git add . → Adiciona todos os arquivos do diretório</li>
+        <li>git add nomearquivo → Adiciona um arquivo desejado. </li>
+        <li>git add nomediretório → adiciona todos do arquivos de um diretório</li>
+    </p>
+
+    <p><b>Commit: </b>usado para confirmar as alterações em um repositório.
+        <li>git commit → salva alterações.</li>
+        <li>git commit -m →permite uma mensagem no commit, importante para comunicação
+            em equipe.</li>
+    </p>
+
+    <p><b>Branch: </b>usado para mostrar os branchs (ramificações) ativos do projeto,
+        além de poder criar e excluir branchs.
+        <li>git branch nomebranch → cria um novo branch desejado a partir do commit atual.</li>
+        <li>git branch -d nomebranch → exclui uma branch, que esteja unido a outra.</li>
+        <li>git branch -D nomebranch → exclui uma branch, mesmo que não esteja unida a outra.</li>
+        <li>git branch -m nomebranch → renomeia a branch.</li>
+        <li>git branch -r → lista todas as branches remotas.</li>
+        <li>git branch -a → lista todas as branches locais e remotas.</li>
+        <i>Obs: o branch principal é main do projeto.</i>
+    </p>
+
+    <p><b>Push: </b>envia as alterações de um branch para um repositório remoto, atualizando
+        o repositório remoto. Antes de usar o push, deve ser feito um commit préviamente.
+    </p>
+
+    <p><b>Checkout: </b>sado para alterna de branches de diferentes maneiras.
+        <li>git checkout nomebranch → muda para uma branch já criada.</li>
+        <li>git checkout -b nomebranch → cria uma branch, já alternando para ela.</li>
+        <li>git checkout - - nomebranch→ descarta mudanças de um arquivo.</li>
+        <li>git checkout - - . → descarta mudanças depois do último commit.</li>
+    </p>
+
+    <p>
+        <b>Push: </b>envia as alterações de um branch local para um repositório remoto, atualizando
+        o repositório remoto. Antes de usar o push, deve ser feito um commit préviamente.
+    </p>
+
+    <p>
+        <b>Checkout: </b>usado para alterna de branches de diferentes maneiras.
+        <li>git checkout nomebranch → muda para uma branch já criada.</li>
+        <li>git checkout -b nomebranch → cria uma branch, já alternando para ela.</li>
+        <li>git checkout - - nomebranch→ descarta mudanças de um arquivo.</li>
+        <li>git checkout - - . → descarta mudanças depois do último commit.</li>
+    </p>
+
+    <p>
+        <b>Merge: </b>une os códigos, incorpora as alterações de um branch para outro.
+        <li>Git merge nomebranch → une uma branch com a atual.</li>
+        <i>Obs: caso as mesmas linhas dos branches forem modificadas, poderá ocorrer conflitos
+            no merge, que devem ser corrigidos manualmente.</i>
+    </p>
+
+    <p>
+        <b>Pull: </b> coloca as atualizações do remoto no repositório local. Possibilita o
+        acesso as mudança recentes no código.
+        <li>git pull nomeremoto nomebranch → une o branch remoto com o atual. </li>
+    </p>
+
+    <p>
+        <b>Clone: </b>clona e manda projetos para o repositório atual. Baixa os arquivos do
+        repositório remoto e cria um diretório local com uma cópia do projeto.
+        <li>git clone URLremoto nomediretorio → clona o repositório em um diretório.</li>
+    </p>
+
+    <p><b>Init: </b>usado para criar um novo repositório GIT em um diretório local vazio.
+        Obs: o comando não tem efeito se o diretório já for GIT.
+    </p>
+
+    <p><b>Log: </b>explica cada mudança que o projeto teve, mostrando os commits realizados, só
+        funciona para arquivos já commitados.
+        <li>Git log → mostra os commits dos arquivos com data, hora que foram executados.</li>
+        <li>Git log nomearquivo → mostra informações sobre um arquivo desejado.</li>
+        <li>Git log - -oneline → mostra apenas a primeira linha do commit, deixando a visualização mais fácil.</li>
+        <li>Git log - -author=nomeautor → visualiza o histórico de commit de uma pessoa.</li>
+        <li>Git log - -since=datacommit → visualiza commit de uma determinada data.</li>
+    </p>
+
+    <p>
+        <b>Rm: </b>remove arquivos e diretórios.
+        <li>rm nomearquivo → remove um arquivo.</li>
+        <li>rm -r nomediretorio → remove um diretório incluindo todos os arquivos armazenados nele.</li>
+    </p>
+
+    <p>
+        <b>Reset: </b>usado para desfazer uma alteração local de algumas formas. Ele apaga os commits,
+        reescrevendo a linha do tempo, portanto é recomendado que utilize-o no repositório local,
+        antes de ser realizado um push.
+        <li>Git reset nomecommit → redefine o branch atual para o commit desejado, descartando commits posteriores.</li>
+        <li>Git reset - -hard nomecommit → também redefine o branch, mas alterações não salvas são permanentemente
+            perdidas.</li>
+        <li>Git reset - -soft nomecommit → redefine o branch como os outros, entretanto mantém arquivos no diretório,
+            que podem ser refeitas em um novo commit.</li>
+    </p>
+
 </body>
+
 </html>
