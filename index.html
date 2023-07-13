@@ -106,11 +106,11 @@
 
     <p><b>Log: </b>explica cada mudança que o projeto teve, mostrando os commits realizados, só
         funciona para arquivos já commitados.
-        <li>Git log → mostra os commits dos arquivos com data, hora que foram executados.</li>
-        <li>Git log nomearquivo → mostra informações sobre um arquivo desejado.</li>
-        <li>Git log - -oneline → mostra apenas a primeira linha do commit, deixando a visualização mais fácil.</li>
-        <li>Git log - -author=nomeautor → visualiza o histórico de commit de uma pessoa.</li>
-        <li>Git log - -since=datacommit → visualiza commit de uma determinada data.</li>
+        <li>git log → mostra os commits dos arquivos com data, hora que foram executados.</li>
+        <li>git log nomearquivo → mostra informações sobre um arquivo desejado.</li>
+        <li>git log - -oneline → mostra apenas a primeira linha do commit, deixando a visualização mais fácil.</li>
+        <li>git log - -author=nomeautor → visualiza o histórico de commit de uma pessoa.</li>
+        <li>git log - -since=datacommit → visualiza commit de uma determinada data.</li>
     </p>
 
     <p>
@@ -123,13 +123,46 @@
         <b>Reset: </b>usado para desfazer uma alteração local de algumas formas. Ele apaga os commits,
         reescrevendo a linha do tempo, portanto é recomendado que utilize-o no repositório local,
         antes de ser realizado um push.
-        <li>Git reset nomecommit → redefine o branch atual para o commit desejado, descartando commits posteriores.</li>
-        <li>Git reset - -hard nomecommit → também redefine o branch, mas alterações não salvas são permanentemente
+        <li>git reset nomecommit → redefine o branch atual para o commit desejado, descartando commits posteriores.</li>
+        <li>git reset - -hard nomecommit → também redefine o branch, mas alterações não salvas são permanentemente
             perdidas.</li>
-        <li>Git reset - -soft nomecommit → redefine o branch como os outros, entretanto mantém arquivos no diretório,
+        <li>git reset - -soft nomecommit → redefine o branch como os outros, entretanto mantém arquivos no diretório,
             que podem ser refeitas em um novo commit.</li>
     </p>
 
+    <p>
+        <b>Revert: </b>diferente do reset, ele desfaz alterações criando um novo commit pelo commit original, desse
+        modo ele não reescreve a linha do tempo dos commits.
+        <li>git revert nomecommit → desfaz as mudanças colocando-as no novo commit.</li>
+        <li>git commit HEAD → desfaz as mudanças do commit mais recente.</li>
+        <li>git revert nomecommit1 nomecommit2 → indica a linha do tempo que serão criados novos commits com
+            para desfazer as mudanças.</li>
+    </p>
+
+    <p>
+        <b>Tag: </b> são usados para marcar pontos específicos na linha do tempo do repositório, assim definem as
+        versão do que está sendo realizado no projeto. Importante para códigos grandes para que facilite a compreensão.
+        <li>git tag → lista as tags do repositório.</li>
+        <li>git tag nometag → cria uma tag.</li>
+        <li>git tag -a nometag -m “mensagem” → cria uma tag com uma mensagem associada a ela.</li>
+        <li>git tag -d nometag → exclui uma tag.</li>
+        <li>git show nometag → mostra informações sobre a tag.</li>
+    </p>
+    <p>
+        <b>Rebase: </b>serve para reescrever / reorganizar o histórico do repositório, ele muda a posição dos commits
+        na linha de tempo de diversas formas. Importante para deixar o histórico mais linear de uma forma que facilite o
+        trabalho.
+        <li>Git rebase nomebranch → aplica os commits do branch atual para outro branch na ponta da linha de tempo.</li>
+        <li>Git -i nomecommit → lista os commits em um editor de texto, que podem ser reordenados de acordo com o
+            desejo do usuário.</li>
+    </p>
+
+    <p>
+        <b>Blame: </b>permite analisar quem foi o autor, horário do último commit e outras informações associadas a uma 
+        linha de código, comando bom para ser usado em códigos grandes, realizados em equipe, visto ao identificar quem 
+        realizou um commit, melhora a comunicação direta. 
+        Git blame nomearquivo → mostra informações de alterações feitas linha por linha.
+    </p>
 </body>
 
 </html>
