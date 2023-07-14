@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>GIT/GITHUB how to use</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -13,34 +14,29 @@
         }
     </style>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="video.html">Explicação em vídeo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="audio.html">explicação em áudio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </head>
 
-<body
+<body>
     <h2>Como utilizar o Git/GitHub</h2>
-    <img src="/prints do projeto/GitHub_Invertocat_Logo.svg">
+    <img src="img/GitHub-Mark.png" height="200" width="200">
     <p><b>GIT: </b>sistema versionamento de arquivos, que permite ter controle de
         tudo que já foi realizado ou alterado em um arquivo. Em que várias pesso
         as podem modificar o mesmo arquivo de diferentes dispositivos.</p>
@@ -185,10 +181,67 @@
     </p>
 
     <p>
-        <b>Blame: </b>permite analisar quem foi o autor, horário do último commit e outras informações associadas a uma 
-        linha de código, comando bom para ser usado em códigos grandes, realizados em equipe, visto ao identificar quem 
-        realizou um commit, melhora a comunicação direta. 
+        <b>Blame: </b>permite analisar quem foi o autor, horário do último commit e outras informações associadas a uma
+        linha de código, comando bom para ser usado em códigos grandes, realizados em equipe, visto ao identificar quem
+        realizou um commit, melhora a comunicação direta.
         Git blame nomearquivo → mostra informações de alterações feitas linha por linha.
+        <li>git blame nomearquivo → mostra informações de alterações feitas linha por linha.</li>
+    </p>
+
+    <p>
+        <b>Remote: </b>usado para estabelecer uma conexão entre o repositório remoto no GitHub e o repositório, assim
+        possibilita que o push seja realizado com sucesso.
+        <li>git remote → lista os repositórios remotos disponiveis associados ao local.</li>
+        <li>git remote add nomeremoto “URLremoto” → associa um repositório remoto (link dele) com o repositório local.
+        </li>
+    </p>
+
+    <p>
+        <b>Rebase: </b>usado para reescrever / reorganizar a linha do tempo de commits de diversas formas.
+        <li>git rebase nomecommit → os commit a frente do desejado serão realocados para cima dele.</li>
+        <li>git rebase - -skip → pula um commit durante o rebase.</li>
+    </p>
+
+    <p>
+        <b>Help: </b>exibe uma lista de ajudas sobre o uso do git e explicação sobre comandos.
+        <li>git help → exibe diversas ajudas gerais e uma breve explicação sobre os comandos.</li>
+        <li>git help -a → exibe a explicação de cada comando.</li>
+        <li>git help git-nomecomando → exibe uma explicação detalhada sobre o comando desejada, além de como usá-las.
+        </li>
+    </p>
+
+    <p>
+        <b>Show: </b>permite visualizar as alterações realizadas nos arquivos de um projeto, além de seus detalhes
+        <li>git show → mostra as alterações realizadas no último commit.</li>
+        <li>git show nomecommit → mostra as últimas alterações do commit desejado.</li>
+    </p>
+
+    <p>
+        <b>Fetch: </b>usado para baixar alterações do repositório remoto sem incorporar no local.
+        <li>git fetch nomeremoto → baixar as alterações do repositório remoto desejado.</li>
+        <i>Obs: caso o usuário deseje incorporar as alterações é necessário usar o git merge após o fetch.</i>
+    </p>
+
+    <p>
+        <b>Config: </b>permite editar as configurações do git, como credenciais e outras.
+        <li>git config -l → lista as configurações de usuário.</li>
+        <li>git config - -global user.name “nome” → coloca ou muda um nome para registrar no git.</li>
+        <li>git config - -global user.email “e-mail” → coloca ou muda um emial para registrar no git</li>
+    </p>
+
+    <p>
+        <b>Stash: </b> permite que sejam guardadas as alterações, assim o usuário consegue limpar o diretório local,
+        mudar de branch.
+        <li>git stash save nomestash → cria um stash com as alterações realizadas.</li>
+        <li>git stash pop → coloca as alterações relizadas no repositório local.</li>
+    </p>
+
+    <p>
+        <b>Diff: </b>possibilita verificar alterações realizadas com diversas informações nos arquivos do diretório local 
+        do trabalho, além de mostrar as diferenças entre os commits executados.
+        <li>git diff → mostra as modificações de todos os arquivos do diretório de trabalho.</li>
+        <li>git diff nomearquivo → mostra as modifcações de um arquivo desejado.</li>
+        <li>git diff nomecommit1 nomecommit2 → mostrar as diferenças entre dois commits desejados,.</li>
     </p>
 </body>
 
